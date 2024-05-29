@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Menu_Panel"
+        android:title="@string/Menu_Panel"
+        android:icon="@drawable/ic_dashboard"/>
+    <item
+        android:id="@+id/Menu_Cuenta"
+        android:title="@string/Menu_Cuenta"
+        android:icon="@drawable/ic_cuenta"/>
+
+</menu>
