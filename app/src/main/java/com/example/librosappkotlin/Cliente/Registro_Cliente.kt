@@ -43,6 +43,10 @@ class Registro_Cliente : AppCompatActivity() {
             validarInformacion()
         }
 
+        binding.TxtTengoCuenta.setOnClickListener{
+            startActivity(Intent(this@Registro_Cliente,Login_Cliente::class.java))
+        }
+
     }
 
     var nombres = ""

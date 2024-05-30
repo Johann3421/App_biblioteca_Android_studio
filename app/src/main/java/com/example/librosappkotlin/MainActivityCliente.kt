@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.librosappkotlin.Fragmentos_Cliente.Fragment_cliente_cuenta
+import com.example.librosappkotlin.Fragmentos_Cliente.Fragment_cliente_dashboard
 import com.example.librosappkotlin.Fragmentos_Cliente.Fragment_cliente_favoritos
 import com.example.librosappkotlin.databinding.ActivityMainClienteBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -66,7 +67,7 @@ class MainActivityCliente : AppCompatActivity() {
     private fun verFragmentoDashboard(){
         val nombre_titulo = "Dashboard"
         binding.TituloRlCliente.text = nombre_titulo
-        val fragment = Fragment_cliente_cuenta()
+        val fragment = Fragment_cliente_dashboard()
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(binding.fragmentsCliente.id,fragment,"Fragment dashboard")
         fragmentTransaction.commit()

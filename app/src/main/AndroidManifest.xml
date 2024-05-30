@@ -28,6 +28,9 @@
         android:theme="@style/Theme.LibrosAppKotlin"
         tools:targetApi="31">
         <activity
+            android:name=".Cliente.Login_Cliente"
+            android:exported="false" />
+        <activity
             android:name=".MainActivityCliente"
             android:exported="false" />
         <activity

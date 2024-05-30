@@ -111,6 +111,13 @@
 
     <string name="Titulo_Rl_Cliente">Titulo</string>
 
+    <string name="CerrarSessionCliente">Cerrar Session</string>
+
+    <!--Login cliente-->
+
+    <string name="TxtLoginCliente">Login cliente</string>
+    <string name="Btn_login_cliente">Ingresar</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
