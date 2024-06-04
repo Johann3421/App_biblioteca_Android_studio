@@ -91,15 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <!--Mas Opciones-->
-        <ImageButton
-            android:id="@+id/Ib_mas_opciones"
-            android:padding="5dp"
-            android:src="@drawable/ic_mas_opciones"
-            android:background="@android:color/transparent"
-            android:layout_alignParentEnd="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+
 
     </RelativeLayout>
 

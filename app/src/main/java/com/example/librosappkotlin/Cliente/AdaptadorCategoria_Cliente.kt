@@ -1,6 +1,7 @@
 package com.example.librosappkotlin.Cliente
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,6 +47,14 @@ class AdaptadorCategoria_Cliente : RecyclerView.Adapter<AdaptadorCategoria_Clien
         val tiempo = modelo.tiempo
 
         holder.categoriaTV.text = categoria
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(context, ListarPdfCliente::class.java)
+            intent.putExtra("idCategoria",id)
+            intent.putExtra("tituloCategoria",categoria)
+            context.startActivity(intent)
+        }
+
     }
 
     inner public class viewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
