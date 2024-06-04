@@ -2,10 +2,13 @@ package com.example.librosappkotlin.Fragmentos_Cliente
 
 import android.content.Context
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.librosappkotlin.Administrador.ModeloCategoria
 import com.example.librosappkotlin.Cliente.AdaptadorCategoria_Cliente
 import com.example.librosappkotlin.R
@@ -41,6 +44,25 @@ class Fragment_cliente_dashboard : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         cargarCategorias()
+
+        binding.BuscarCategoria.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(categoria: CharSequence?, start: Int, before: Int, count: Int) {
+                try {
+                    adaptadorCategoria.filter.filter(categoria)
+                }catch (e:Exception){
+                    Toast.makeText(mContext, "${e.message}", Toast.LENGTH_SHORT).show()
+                }
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+        })
     }
 
     private fun cargarCategorias() {

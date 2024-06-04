@@ -4,21 +4,27 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.librosappkotlin.Administrador.ModeloCategoria
 import com.example.librosappkotlin.databinding.ItemCategoriaClienteBinding
 
-class AdaptadorCategoria_Cliente : RecyclerView.Adapter<AdaptadorCategoria_Cliente.viewHolder> {
+class AdaptadorCategoria_Cliente : RecyclerView.Adapter<AdaptadorCategoria_Cliente.viewHolder>, Filterable {
 
     private lateinit var binding : ItemCategoriaClienteBinding
 
     private val context : Context
-    private val categoriaArrayList : ArrayList<ModeloCategoria>
+    public var categoriaArrayList : ArrayList<ModeloCategoria>
+
+    private var filtroLista : ArrayList<ModeloCategoria>
+    private var filtro : FiltrarCategoria_Cliente ?= null
 
     constructor(context: Context, categoriaArrayList: ArrayList<ModeloCategoria>) {
         this.context = context
         this.categoriaArrayList = categoriaArrayList
+        this.filtroLista = categoriaArrayList
     }
 
 
@@ -46,5 +52,12 @@ class AdaptadorCategoria_Cliente : RecyclerView.Adapter<AdaptadorCategoria_Clien
 
         var categoriaTV : TextView = binding.ItemNombreCatC
 
+    }
+
+    override fun getFilter(): Filter {
+        if (filtro == null){
+            filtro = FiltrarCategoria_Cliente(filtroLista, this)
+        }
+        return filtro as FiltrarCategoria_Cliente
     }
 }
