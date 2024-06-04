@@ -89,7 +89,8 @@
 
 
             </com.google.android.material.textfield.TextInputLayout>
-            
+
+            <!--Ingresar con correo electronico-->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/Btn_login_cliente"
                 android:text="@string/Btn_login_cliente"
@@ -98,6 +99,31 @@
                 android:layout_marginTop="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:background="#cccccc"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:text="@string/Txt_alternativa"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Login google-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_Login_google"
+                android:text="@string/Btn_Login_google"
+                android:textAllCaps="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:icon="@drawable/login_google"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"/>
+            
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>

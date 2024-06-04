@@ -118,6 +118,14 @@
     <string name="TxtLoginCliente">Login cliente</string>
     <string name="Btn_login_cliente">Ingresar</string>
 
+    <!--Login google-->
+    <string name="Txt_alternativa">Alternativa</string>
+    <string name="Btn_Login_google">Ingresar con Google</string>
+
+    <string name="default_web_client_id">615827656651-imi5h93tcm54he77njqpm50h7t4upa4o.apps.googleusercontent.com</string>
+
+    <string name="Item_nombre_cat_c">Nombre Categoria</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
